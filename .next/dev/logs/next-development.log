@@ -1,0 +1,3 @@
+[00:00:01.323] Server  LOG     ✓ Ready in 961ms
+[00:00:05.433] Server  LOG     ○ Compiling / ...
+[00:00:10.192] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.

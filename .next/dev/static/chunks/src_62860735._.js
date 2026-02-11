@@ -435,14 +435,6 @@ function ScenarioChart({ price, events, scenario, decisions, onScenarioChange, o
                 fileName: "[project]/src/components/ScenarioChart.tsx",
                 lineNumber: 146,
                 columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "text-gray-500 text-xs mt-2 leading-relaxed",
-                children: '"판단 로그 추가"를 누르면 BUY/HOLD/SELL + 메모를 입력하고, 차트에 팀 판단 마커가 생성됩니다.'
-            }, void 0, false, {
-                fileName: "[project]/src/components/ScenarioChart.tsx",
-                lineNumber: 156,
-                columnNumber: 7
             }, this)
         ]
     }, void 0, true, {

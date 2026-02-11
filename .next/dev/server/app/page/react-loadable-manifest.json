@@ -13,7 +13,7 @@
       "static/chunks/node_modules_highcharts_es-modules_36244923._.js",
       "static/chunks/node_modules_highcharts-react-official_dist_highcharts-react_min_db89b0cf.js",
       "static/chunks/src_74b079ec._.js",
-      "static/chunks/src_components_PriceEventChart_tsx_97f3f1c5._.js"
+      "static/chunks/src_components_PriceEventChart_tsx_75752ac2._.js"
     ]
   },
   "[project]/src/components/CompareCharts.tsx [app-client] (ecmascript, next/dynamic entry)": {
@@ -30,7 +30,7 @@
       "static/chunks/node_modules_highcharts_es-modules_36244923._.js",
       "static/chunks/node_modules_highcharts-react-official_dist_highcharts-react_min_db89b0cf.js",
       "static/chunks/src_8609adf4._.js",
-      "static/chunks/src_components_CompareCharts_tsx_97f3f1c5._.js"
+      "static/chunks/src_components_CompareCharts_tsx_75752ac2._.js"
     ]
   },
   "[project]/src/components/ScenarioChart.tsx [app-client] (ecmascript, next/dynamic entry)": {
@@ -47,7 +47,7 @@
       "static/chunks/node_modules_highcharts_es-modules_36244923._.js",
       "static/chunks/node_modules_highcharts-react-official_dist_highcharts-react_min_db89b0cf.js",
       "static/chunks/src_62860735._.js",
-      "static/chunks/src_components_ScenarioChart_tsx_97f3f1c5._.js"
+      "static/chunks/src_components_ScenarioChart_tsx_75752ac2._.js"
     ]
   }
 }

@@ -434,14 +434,6 @@ function PriceEventChart({ price, events, filterType, filterImpact, onFilterType
                 fileName: "[project]/src/components/PriceEventChart.tsx",
                 lineNumber: 112,
                 columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "text-gray-500 text-xs mt-2 leading-relaxed",
-                children: '이벤트가 많아져도 "필터 + 강도"로 정보 과부하를 통제합니다.'
-            }, void 0, false, {
-                fileName: "[project]/src/components/PriceEventChart.tsx",
-                lineNumber: 121,
-                columnNumber: 7
             }, this)
         ]
     }, void 0, true, {

@@ -118,9 +118,6 @@ export default function PriceEventChart({
           containerProps={{ style: { height: "100%" } }}
         />
       </div>
-      <p className="text-gray-500 text-xs mt-2 leading-relaxed">
-        이벤트가 많아져도 &quot;필터 + 강도&quot;로 정보 과부하를 통제합니다.
-      </p>
     </div>
   );
 }

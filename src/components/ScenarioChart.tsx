@@ -153,10 +153,6 @@ export default function ScenarioChart({
           callback={afterChartCreated}
         />
       </div>
-      <p className="text-gray-500 text-xs mt-2 leading-relaxed">
-        &quot;판단 로그 추가&quot;를 누르면 BUY/HOLD/SELL + 메모를 입력하고,
-        차트에 팀 판단 마커가 생성됩니다.
-      </p>
     </div>
   );
 }

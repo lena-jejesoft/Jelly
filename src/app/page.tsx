@@ -3,9 +3,11 @@
 import React, { useState, useMemo, useCallback, useEffect } from "react";
 import dynamic from "next/dynamic";
 import type { EventItem, Decision, Scenario, ReportDraft } from "@/lib/data";
-import { genPriceSeries, genEvents, DAY, createDefaultReport } from "@/lib/data";
-import ResizeHandle from "@/components/ResizeHandle";
+import { genPriceSeries, genEvents, DAY, createDefaultReport, EVENT_TYPES } from "@/lib/data";
 import { TabBar } from "@/components/Toolbar";
+import SearchBar from "@/components/SearchBar";
+import RightPanel from "@/components/RightPanel";
+import LeftPanel from "@/components/LeftPanel";
 
 const UnifiedChart = dynamic(() => import("@/components/UnifiedChart"), {
   ssr: false,
@@ -39,17 +41,9 @@ export default function Home() {
 
   const [filterType, setFilterType] = useState("ALL");
   const [filterImpact, setFilterImpact] = useState(2);
+  const [searchQuery, setSearchQuery] = useState("");
   const [selectedEvent, setSelectedEvent] = useState<EventItem | null>(null);
   const [scenario, setScenario] = useState<Scenario>("BASE");
-  const [panelWidth, setPanelWidth] = useState(360);
-
-  const handleResize = useCallback((delta: number) => {
-    setPanelWidth((prev) => Math.min(700, Math.max(200, prev + delta)));
-  }, []);
-
-  const handleResizeEnd = useCallback(() => {
-    window.dispatchEvent(new Event("resize"));
-  }, []);
   const [decisions, setDecisions] = useState<Decision[]>(() => [
     {
       x: events[3].x + 2 * DAY,
@@ -73,6 +67,26 @@ export default function Home() {
   const [modalStance, setModalStance] = useState<Decision["stance"]>("BUY");
   const [modalNote, setModalNote] = useState("");
   const [modalWho, setModalWho] = useState("Team");
+
+  /* ── Search filter ── */
+  const filteredBySearch = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return events;
+    return events.filter((e) => {
+      const haystack = [
+        e.text, e.desc, e.content, e.source, e.sourceDate,
+        EVENT_TYPES[e.type]?.name ?? e.type,
+      ].join(" ").toLowerCase();
+      return haystack.includes(q);
+    });
+  }, [events, searchQuery]);
+
+  // 선택된 이벤트가 필터링되어 사라지면 해제
+  useEffect(() => {
+    if (selectedEvent && !filteredBySearch.find((e) => e.id === selectedEvent.id)) {
+      setSelectedEvent(null);
+    }
+  }, [filteredBySearch, selectedEvent]);
 
   /* ── Tab state ── */
   const [activeTab, setActiveTab] = useState("analysis");
@@ -129,95 +143,53 @@ export default function Home() {
 
       {/* ── Analysis Tab (display toggle to keep chart mounted) ── */}
       <div
-        className="flex flex-1 min-h-0"
+        className="flex-1 min-h-0 flex"
         style={{ display: activeTab === "analysis" ? "flex" : "none" }}
       >
-        {/* 좌측: 차트 영역 */}
-        <main className="flex-1 min-w-0 overflow-hidden pl-6 pr-4 pt-6">
-          <UnifiedChart
-            price={price}
-            events={events}
-            filterType={filterType}
-            filterImpact={filterImpact}
-            onFilterTypeChange={setFilterType}
-            onFilterImpactChange={setFilterImpact}
-            onEventClick={setSelectedEvent}
-            scenario={scenario}
-            decisions={decisions}
-            onScenarioChange={setScenario}
-            onAddDecision={handleAddDecision}
-          />
-        </main>
+        {/* 좌측 네비게이션 패널 */}
+        <LeftPanel />
 
-        <ResizeHandle onResize={handleResize} onResizeEnd={handleResizeEnd} />
+        {/* 좌측: 스크롤 가능한 메인 영역 */}
+        <div className="flex-1 min-w-0 overflow-y-auto">
+          <main className="px-6 pt-6">
+            <SearchBar value={searchQuery} onChange={setSearchQuery} />
+            <UnifiedChart
+              price={price}
+              events={filteredBySearch}
+              filterType={filterType}
+              filterImpact={filterImpact}
+              onFilterTypeChange={setFilterType}
+              onFilterImpactChange={setFilterImpact}
+              onEventClick={setSelectedEvent}
+              scenario={scenario}
+              decisions={decisions}
+              onScenarioChange={setScenario}
+              onAddDecision={handleAddDecision}
+            />
+          </main>
 
-        {/* 우측: 이벤트 상세 패널 */}
-        <aside
-          className="shrink-0 border-l border-gray-800 bg-[#0f172a] overflow-y-auto"
-          style={{ width: panelWidth }}
-        >
-          {selectedEvent ? (
-            <div className="p-4">
-              <div className="flex items-center justify-between mb-3">
-                <h2 className="text-sm font-semibold text-gray-200">Event Detail</h2>
-                <button
-                  onClick={() => setSelectedEvent(null)}
-                  className="text-gray-500 hover:text-gray-300 text-xs"
-                >
-                  ✕
-                </button>
-              </div>
-              <dl className="space-y-2 text-sm">
-                <div>
-                  <dt className="text-gray-500 text-xs">Title</dt>
-                  <dd className="text-gray-200">{selectedEvent.text}</dd>
-                </div>
-                <div>
-                  <dt className="text-gray-500 text-xs">Type</dt>
-                  <dd className="text-gray-200">{selectedEvent.type}</dd>
-                </div>
-                <div>
-                  <dt className="text-gray-500 text-xs">Date</dt>
-                  <dd className="text-gray-200">
-                    {new Date(selectedEvent.x).toLocaleDateString()}
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-gray-500 text-xs">Impact</dt>
-                  <dd className="text-gray-200">{"★".repeat(selectedEvent.impact)}</dd>
-                </div>
-                <div>
-                  <dt className="text-gray-500 text-xs">Description</dt>
-                  <dd className="text-gray-300 leading-relaxed">{selectedEvent.desc}</dd>
-                </div>
-                <div>
-                  <dt className="text-gray-500 text-xs">Detail</dt>
-                  <dd className="text-gray-300 leading-relaxed">{selectedEvent.content}</dd>
-                </div>
-                <div className="border-t border-gray-700 pt-2 mt-2">
-                  <dt className="text-gray-500 text-xs">출처</dt>
-                  <dd className="text-gray-400 text-xs">{selectedEvent.source}</dd>
-                </div>
-                <div>
-                  <dt className="text-gray-500 text-xs">출처 일자</dt>
-                  <dd className="text-gray-400 text-xs">{selectedEvent.sourceDate}</dd>
-                </div>
-              </dl>
-              <div className="border-t border-gray-700 mt-4 pt-4">
-                <CompareCharts
-                  selectedEvent={selectedEvent}
-                  price={price}
-                  onReset={() => setSelectedEvent(null)}
-                  compact
-                  priceRange={priceRange}
-                />
-              </div>
-            </div>
-          ) : (
-            <div className="p-4 text-gray-600 text-sm">
-              차트에서 이벤트를 클릭하면 상세 정보가 여기에 표시됩니다.
+          {/* CompareCharts (이벤트 선택 시) */}
+          {selectedEvent && (
+            <div className="px-6 py-4">
+              <CompareCharts
+                selectedEvent={selectedEvent}
+                price={price}
+                onReset={() => setSelectedEvent(null)}
+                priceRange={priceRange}
+              />
             </div>
           )}
+        </div>
+
+        {/* 우측: 고정 패널 */}
+        <aside className="w-[360px] shrink-0 border-l border-gray-800 bg-[#0f172a] overflow-y-auto">
+          <RightPanel
+            events={filteredBySearch}
+            selectedEvent={selectedEvent}
+            onEventClick={setSelectedEvent}
+            price={price}
+            decisions={decisions}
+          />
         </aside>
       </div>
 

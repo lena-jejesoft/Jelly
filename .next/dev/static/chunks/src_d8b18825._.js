@@ -125,35 +125,13 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-function makeCompareOptions(data, eventFlag, compact = false, priceRange) {
+function makeCompareOptions(data, eventFlag, priceRange) {
     return {
-        ...compact ? {
-            chart: {
-                spacing: [
-                    5,
-                    5,
-                    15,
-                    5
-                ]
-            }
-        } : {
-            rangeSelector: {
-                enabled: false
-            },
-            navigator: {
-                enabled: false,
-                height: 0
-            },
-            scrollbar: {
-                enabled: false,
-                height: 0
-            }
-        },
         credits: {
-            enabled: !compact
+            enabled: true
         },
         legend: {
-            enabled: !compact
+            enabled: true
         },
         tooltip: {
             shared: true
@@ -190,7 +168,7 @@ function makeCompareOptions(data, eventFlag, compact = false, priceRange) {
         ]
     };
 }
-function CompareCharts({ selectedEvent, price, onReset, compact = false, priceRange }) {
+function CompareCharts({ selectedEvent, price, onReset, priceRange }) {
     _s();
     const [rangeDays, setRangeDays] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(30);
     const { beforeData, afterData, flag } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
@@ -217,19 +195,17 @@ function CompareCharts({ selectedEvent, price, onReset, compact = false, priceRa
         rangeDays
     ]);
     const beforeOpts = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
-        "CompareCharts.useMemo[beforeOpts]": ()=>makeCompareOptions(beforeData, flag, compact, priceRange)
+        "CompareCharts.useMemo[beforeOpts]": ()=>makeCompareOptions(beforeData, flag, priceRange)
     }["CompareCharts.useMemo[beforeOpts]"], [
         beforeData,
         flag,
-        compact,
         priceRange
     ]);
     const afterOpts = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
-        "CompareCharts.useMemo[afterOpts]": ()=>makeCompareOptions(afterData, flag, compact, priceRange)
+        "CompareCharts.useMemo[afterOpts]": ()=>makeCompareOptions(afterData, flag, priceRange)
     }["CompareCharts.useMemo[afterOpts]"], [
         afterData,
         flag,
-        compact,
         priceRange
     ]);
     const kpis = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
@@ -259,180 +235,15 @@ function CompareCharts({ selectedEvent, price, onReset, compact = false, priceRa
     ]);
     const leftTitle = selectedEvent ? `Before: D-${rangeDays} ~ D (${selectedEvent.text})` : "Before (선택 전)";
     const rightTitle = selectedEvent ? `After: D ~ D+${rangeDays} (${selectedEvent.text})` : "After (선택 전)";
-    if (compact) {
-        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "mt-6",
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex items-center gap-2 mb-2",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                            className: "text-xs font-semibold text-gray-300",
-                            children: "Before / After 비교"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/CompareCharts.tsx",
-                            lineNumber: 126,
-                            columnNumber: 11
-                        }, this),
-                        [
-                            30,
-                            60
-                        ].map((d)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>setRangeDays(d),
-                                className: `text-[11px] px-2 py-0.5 rounded-full border ${rangeDays === d ? "border-blue-500 text-blue-400 bg-blue-500/10" : "border-gray-700 text-gray-500 hover:text-gray-300"}`,
-                                children: [
-                                    d,
-                                    "일"
-                                ]
-                            }, d, true, {
-                                fileName: "[project]/src/components/CompareCharts.tsx",
-                                lineNumber: 128,
-                                columnNumber: 13
-                            }, this))
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/src/components/CompareCharts.tsx",
-                    lineNumber: 125,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "grid grid-cols-1 gap-6",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Toolbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Chip"], {
-                                    children: leftTitle
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/CompareCharts.tsx",
-                                    lineNumber: 141,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "h-[200px] mt-1",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$highcharts$2d$react$2d$official$2f$dist$2f$highcharts$2d$react$2e$min$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                        highcharts: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$highcharts$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"],
-                                        constructorType: "chart",
-                                        options: beforeOpts,
-                                        containerProps: {
-                                            style: {
-                                                height: "100%"
-                                            }
-                                        }
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/CompareCharts.tsx",
-                                        lineNumber: 143,
-                                        columnNumber: 15
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/CompareCharts.tsx",
-                                    lineNumber: 142,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/CompareCharts.tsx",
-                            lineNumber: 140,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Toolbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Chip"], {
-                                    children: rightTitle
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/CompareCharts.tsx",
-                                    lineNumber: 152,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "h-[200px] mt-1",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$highcharts$2d$react$2d$official$2f$dist$2f$highcharts$2d$react$2e$min$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                        highcharts: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$highcharts$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"],
-                                        constructorType: "chart",
-                                        options: afterOpts,
-                                        containerProps: {
-                                            style: {
-                                                height: "100%"
-                                            }
-                                        }
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/CompareCharts.tsx",
-                                        lineNumber: 154,
-                                        columnNumber: 15
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/CompareCharts.tsx",
-                                    lineNumber: 153,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/CompareCharts.tsx",
-                            lineNumber: 151,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/src/components/CompareCharts.tsx",
-                    lineNumber: 139,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "grid grid-cols-2 gap-1.5 mt-2",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(KpiBox, {
-                            label: "선택 이벤트",
-                            value: kpis.event
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/CompareCharts.tsx",
-                            lineNumber: 165,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(KpiBox, {
-                            label: "Before 수익률",
-                            value: kpis.before
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/CompareCharts.tsx",
-                            lineNumber: 166,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(KpiBox, {
-                            label: "After 수익률",
-                            value: kpis.after
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/CompareCharts.tsx",
-                            lineNumber: 167,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(KpiBox, {
-                            label: "After 변동성(대략)",
-                            value: kpis.vol
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/CompareCharts.tsx",
-                            lineNumber: 168,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/src/components/CompareCharts.tsx",
-                    lineNumber: 164,
-                    columnNumber: 9
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "[project]/src/components/CompareCharts.tsx",
-            lineNumber: 124,
-            columnNumber: 7
-        }, this);
-    }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "card mt-3",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                className: "text-sm font-bold my-1 mb-2.5",
-                children: "2) 이벤트 클릭 → Before / After 자동 비교"
+                className: "text-sm font-semibold text-gray-200 my-1 mb-2.5",
+                children: "Before / After 비교"
             }, void 0, false, {
                 fileName: "[project]/src/components/CompareCharts.tsx",
-                lineNumber: 176,
+                lineNumber: 114,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Toolbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Toolbar"], {
@@ -441,7 +252,7 @@ function CompareCharts({ selectedEvent, price, onReset, compact = false, priceRa
                         children: "클릭한 이벤트 기준"
                     }, void 0, false, {
                         fileName: "[project]/src/components/CompareCharts.tsx",
-                        lineNumber: 180,
+                        lineNumber: 118,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Toolbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Chip"], {
@@ -452,7 +263,7 @@ function CompareCharts({ selectedEvent, price, onReset, compact = false, priceRa
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/CompareCharts.tsx",
-                        lineNumber: 181,
+                        lineNumber: 119,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Toolbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Chip"], {
@@ -462,7 +273,7 @@ function CompareCharts({ selectedEvent, price, onReset, compact = false, priceRa
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/CompareCharts.tsx",
-                        lineNumber: 182,
+                        lineNumber: 120,
                         columnNumber: 9
                     }, this),
                     [
@@ -477,7 +288,7 @@ function CompareCharts({ selectedEvent, price, onReset, compact = false, priceRa
                             ]
                         }, d, true, {
                             fileName: "[project]/src/components/CompareCharts.tsx",
-                            lineNumber: 184,
+                            lineNumber: 122,
                             columnNumber: 11
                         }, this)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Toolbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -485,13 +296,13 @@ function CompareCharts({ selectedEvent, price, onReset, compact = false, priceRa
                         children: "선택 해제"
                     }, void 0, false, {
                         fileName: "[project]/src/components/CompareCharts.tsx",
-                        lineNumber: 193,
+                        lineNumber: 131,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/CompareCharts.tsx",
-                lineNumber: 179,
+                lineNumber: 117,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -503,34 +314,34 @@ function CompareCharts({ selectedEvent, price, onReset, compact = false, priceRa
                                 children: leftTitle
                             }, void 0, false, {
                                 fileName: "[project]/src/components/CompareCharts.tsx",
-                                lineNumber: 198,
+                                lineNumber: 136,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "h-[360px] mt-2",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$highcharts$2d$react$2d$official$2f$dist$2f$highcharts$2d$react$2e$min$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     highcharts: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$highcharts$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"],
-                                    constructorType: "stockChart",
+                                    constructorType: "chart",
                                     options: beforeOpts,
                                     containerProps: {
                                         style: {
                                             height: "100%"
                                         }
                                     }
-                                }, void 0, false, {
+                                }, `before-${selectedEvent?.id}`, false, {
                                     fileName: "[project]/src/components/CompareCharts.tsx",
-                                    lineNumber: 200,
+                                    lineNumber: 138,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/CompareCharts.tsx",
-                                lineNumber: 199,
+                                lineNumber: 137,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/CompareCharts.tsx",
-                        lineNumber: 197,
+                        lineNumber: 135,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -539,40 +350,40 @@ function CompareCharts({ selectedEvent, price, onReset, compact = false, priceRa
                                 children: rightTitle
                             }, void 0, false, {
                                 fileName: "[project]/src/components/CompareCharts.tsx",
-                                lineNumber: 209,
+                                lineNumber: 148,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "h-[360px] mt-2",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$highcharts$2d$react$2d$official$2f$dist$2f$highcharts$2d$react$2e$min$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     highcharts: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$highcharts$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"],
-                                    constructorType: "stockChart",
+                                    constructorType: "chart",
                                     options: afterOpts,
                                     containerProps: {
                                         style: {
                                             height: "100%"
                                         }
                                     }
-                                }, void 0, false, {
+                                }, `after-${selectedEvent?.id}`, false, {
                                     fileName: "[project]/src/components/CompareCharts.tsx",
-                                    lineNumber: 211,
+                                    lineNumber: 150,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/CompareCharts.tsx",
-                                lineNumber: 210,
+                                lineNumber: 149,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/CompareCharts.tsx",
-                        lineNumber: 208,
+                        lineNumber: 147,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/CompareCharts.tsx",
-                lineNumber: 196,
+                lineNumber: 134,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -583,7 +394,7 @@ function CompareCharts({ selectedEvent, price, onReset, compact = false, priceRa
                         value: kpis.event
                     }, void 0, false, {
                         fileName: "[project]/src/components/CompareCharts.tsx",
-                        lineNumber: 222,
+                        lineNumber: 162,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(KpiBox, {
@@ -591,7 +402,7 @@ function CompareCharts({ selectedEvent, price, onReset, compact = false, priceRa
                         value: kpis.before
                     }, void 0, false, {
                         fileName: "[project]/src/components/CompareCharts.tsx",
-                        lineNumber: 223,
+                        lineNumber: 163,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(KpiBox, {
@@ -599,7 +410,7 @@ function CompareCharts({ selectedEvent, price, onReset, compact = false, priceRa
                         value: kpis.after
                     }, void 0, false, {
                         fileName: "[project]/src/components/CompareCharts.tsx",
-                        lineNumber: 224,
+                        lineNumber: 164,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(KpiBox, {
@@ -607,13 +418,13 @@ function CompareCharts({ selectedEvent, price, onReset, compact = false, priceRa
                         value: kpis.vol
                     }, void 0, false, {
                         fileName: "[project]/src/components/CompareCharts.tsx",
-                        lineNumber: 225,
+                        lineNumber: 165,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/CompareCharts.tsx",
-                lineNumber: 221,
+                lineNumber: 161,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -621,13 +432,13 @@ function CompareCharts({ selectedEvent, price, onReset, compact = false, priceRa
                 children: "이벤트 클릭 → 전후 구간을 자동으로 잘라 비교합니다."
             }, void 0, false, {
                 fileName: "[project]/src/components/CompareCharts.tsx",
-                lineNumber: 228,
+                lineNumber: 168,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/CompareCharts.tsx",
-        lineNumber: 175,
+        lineNumber: 113,
         columnNumber: 5
     }, this);
 }
@@ -642,7 +453,7 @@ function KpiBox({ label, value }) {
                 children: label
             }, void 0, false, {
                 fileName: "[project]/src/components/CompareCharts.tsx",
-                lineNumber: 238,
+                lineNumber: 178,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -650,13 +461,13 @@ function KpiBox({ label, value }) {
                 children: value
             }, void 0, false, {
                 fileName: "[project]/src/components/CompareCharts.tsx",
-                lineNumber: 239,
+                lineNumber: 179,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/CompareCharts.tsx",
-        lineNumber: 237,
+        lineNumber: 177,
         columnNumber: 5
     }, this);
 }

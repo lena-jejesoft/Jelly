@@ -1,14 +1,57 @@
-[00:00:01.484] Server  LOG     ✓ Ready in 1022ms
-[00:00:06.273] Server  LOG     ○ Compiling / ...
-[00:00:12.111] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:12.479] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[00:31:51.113] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[00:39:47.648] Server  LOG     ✓ Compiled in 105ms
-[00:40:05.587] Server  LOG     ✓ Compiled in 95ms
-[00:40:15.022] Server  LOG     ✓ Compiled in 62ms
-[00:40:22.556] Server  LOG     ✓ Compiled in 223ms
-[00:41:29.078] Server  LOG     ✓ Compiled in 87ms
-[00:42:10.054] Server  LOG     ✓ Compiled in 488ms
-[00:42:12.983] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[00:42:13.526] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:42:15.162] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[00:00:22.472] Server  LOG     ✓ Ready in 19.8s
+[00:00:39.262] Server  LOG     ○ Compiling / ...
+[00:00:51.756] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[00:21:01.265] Server  LOG     ✓ Compiled in 152ms
+[00:21:04.215] Server  LOG     ✓ Compiled in 78ms
+[00:21:07.668] Server  LOG     ✓ Compiled in 351ms
+[00:21:10.457] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[00:41:56.078] Server  LOG     ✓ Compiled in 484ms
+[00:41:59.535] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[00:42:03.649] Server  LOG     ✓ Compiled in 46ms
+[00:42:50.171] Server  LOG     ✓ Compiled in 154ms
+[00:42:59.275] Server  LOG     ✓ Compiled in 79ms
+[00:43:06.432] Server  LOG     ✓ Compiled in 71ms
+[00:43:49.533] Server  LOG     ✓ Compiled in 81ms
+[00:44:35.271] Server  LOG     ✓ Compiled in 78ms
+[00:45:12.365] Server  LOG     ✓ Compiled in 82ms
+[00:46:03.466] Server  LOG     ✓ Compiled in 66ms
+[00:46:16.214] Server  LOG     ✓ Compiled in 67ms
+[00:50:10.157] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[00:51:16.709] Server  LOG     ✓ Compiled in 220ms
+[00:51:18.859] Server  LOG     ✓ Compiled in 282ms
+[00:51:21.030] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[00:51:27.854] Server  LOG     ✓ Compiled in 80ms
+[00:52:02.961] Server  LOG     ✓ Compiled in 414ms
+[00:52:04.751] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[00:52:12.369] Server  LOG     ✓ Compiled in 134ms
+[00:52:19.399] Server  LOG     ✓ Compiled in 147ms
+[00:52:59.846] Server  LOG     ✓ Compiled in 78ms
+[00:53:46.150] Server  LOG     ✓ Compiled in 88ms
+[00:54:21.789] Server  LOG     ✓ Compiled in 91ms
+[00:54:45.160] Server  LOG     ✓ Compiled in 79ms
+[00:55:11.335] Server  LOG     ✓ Compiled in 80ms
+[00:55:23.868] Server  LOG     ✓ Compiled in 61ms
+[00:57:18.557] Server  LOG     ✓ Compiled in 230ms
+[00:57:26.235] Server  LOG     ✓ Compiled in 305ms
+[00:57:29.275] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[00:57:33.747] Server  LOG     ✓ Compiled in 27ms
+[00:58:19.325] Server  LOG     ✓ Compiled in 156ms
+[00:58:28.291] Server  LOG     ✓ Compiled in 74ms
+[00:58:34.800] Server  LOG     ✓ Compiled in 75ms
+[00:59:18.888] Server  LOG     ✓ Compiled in 91ms
+[01:00:04.342] Server  LOG     ✓ Compiled in 89ms
+[01:05:15.925] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[01:05:22.986] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[01:05:46.752] Server  LOG     ✓ Compiled in 152ms
+[01:05:51.051] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[01:05:56.689] Server  LOG     ✓ Compiled in 31ms
+[01:06:31.672] Server  LOG     ✓ Compiled in 172ms
+[01:06:33.457] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[01:06:40.439] Server  LOG     ✓ Compiled in 64ms
+[01:06:47.186] Server  LOG     ✓ Compiled in 86ms
+[01:07:24.455] Server  LOG     ✓ Compiled in 83ms
+[01:08:10.153] Server  LOG     ✓ Compiled in 86ms
+[01:08:17.392] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[01:09:31.311] Server  LOG     ✓ Compiled in 135ms
+[01:09:35.605] Server  LOG     ✓ Compiled in 48ms
+[01:11:53.927] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.

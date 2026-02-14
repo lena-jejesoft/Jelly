@@ -18,26 +18,17 @@ interface Props {
   selectedEvent: EventItem | null;
   price: PricePoint[];
   onReset: () => void;
-  compact?: boolean;
   priceRange?: { min: number; max: number };
 }
 
 function makeCompareOptions(
   data: PricePoint[],
   eventFlag: { x: number; title: string; text: string } | null,
-  compact = false,
   priceRange?: { min: number; max: number },
 ): Highcharts.Options {
   return {
-    ...(compact
-      ? { chart: { spacing: [5, 5, 15, 5] } }
-      : {
-          rangeSelector: { enabled: false },
-          navigator: { enabled: false, height: 0 },
-          scrollbar: { enabled: false, height: 0 },
-        }),
-    credits: { enabled: !compact },
-    legend: { enabled: !compact },
+    credits: { enabled: true },
+    legend: { enabled: true },
     tooltip: { shared: true },
     xAxis: { type: "datetime" as const },
     yAxis: {
@@ -70,7 +61,6 @@ export default function CompareCharts({
   selectedEvent,
   price,
   onReset,
-  compact = false,
   priceRange,
 }: Props) {
   const [rangeDays, setRangeDays] = useState(30);
@@ -86,12 +76,12 @@ export default function CompareCharts({
   }, [selectedEvent, price, rangeDays]);
 
   const beforeOpts = useMemo(
-    () => makeCompareOptions(beforeData, flag, compact, priceRange),
-    [beforeData, flag, compact, priceRange]
+    () => makeCompareOptions(beforeData, flag, priceRange),
+    [beforeData, flag, priceRange]
   );
   const afterOpts = useMemo(
-    () => makeCompareOptions(afterData, flag, compact, priceRange),
-    [afterData, flag, compact, priceRange]
+    () => makeCompareOptions(afterData, flag, priceRange),
+    [afterData, flag, priceRange]
   );
 
   const kpis = useMemo(() => {
@@ -119,62 +109,10 @@ export default function CompareCharts({
     ? `After: D ~ D+${rangeDays} (${selectedEvent.text})`
     : "After (선택 전)";
 
-  if (compact) {
-    return (
-      <div className="mt-6">
-        <div className="flex items-center gap-2 mb-2">
-          <h3 className="text-xs font-semibold text-gray-300">Before / After 비교</h3>
-          {[30, 60].map((d) => (
-            <button key={d} onClick={() => setRangeDays(d)}
-              className={`text-[11px] px-2 py-0.5 rounded-full border ${
-                rangeDays === d
-                  ? "border-blue-500 text-blue-400 bg-blue-500/10"
-                  : "border-gray-700 text-gray-500 hover:text-gray-300"
-              }`}>
-              {d}일
-            </button>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 gap-6">
-          <div>
-            <Chip>{leftTitle}</Chip>
-            <div className="h-[200px] mt-1">
-              <HighchartsReact
-                highcharts={Highcharts}
-                constructorType="chart"
-                options={beforeOpts}
-                containerProps={{ style: { height: "100%" } }}
-              />
-            </div>
-          </div>
-          <div>
-            <Chip>{rightTitle}</Chip>
-            <div className="h-[200px] mt-1">
-              <HighchartsReact
-                highcharts={Highcharts}
-                constructorType="chart"
-                options={afterOpts}
-                containerProps={{ style: { height: "100%" } }}
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-2 gap-1.5 mt-2">
-          <KpiBox label="선택 이벤트" value={kpis.event} />
-          <KpiBox label="Before 수익률" value={kpis.before} />
-          <KpiBox label="After 수익률" value={kpis.after} />
-          <KpiBox label="After 변동성(대략)" value={kpis.vol} />
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="card mt-3">
-      <h2 className="text-sm font-bold my-1 mb-2.5">
-        2) 이벤트 클릭 → Before / After 자동 비교
+      <h2 className="text-sm font-semibold text-gray-200 my-1 mb-2.5">
+        Before / After 비교
       </h2>
       <Toolbar>
         <Chip>클릭한 이벤트 기준</Chip>
@@ -198,8 +136,9 @@ export default function CompareCharts({
           <Chip>{leftTitle}</Chip>
           <div className="h-[360px] mt-2">
             <HighchartsReact
+              key={`before-${selectedEvent?.id}`}
               highcharts={Highcharts}
-              constructorType="stockChart"
+              constructorType="chart"
               options={beforeOpts}
               containerProps={{ style: { height: "100%" } }}
             />
@@ -209,8 +148,9 @@ export default function CompareCharts({
           <Chip>{rightTitle}</Chip>
           <div className="h-[360px] mt-2">
             <HighchartsReact
+              key={`after-${selectedEvent?.id}`}
               highcharts={Highcharts}
-              constructorType="stockChart"
+              constructorType="chart"
               options={afterOpts}
               containerProps={{ style: { height: "100%" } }}
             />

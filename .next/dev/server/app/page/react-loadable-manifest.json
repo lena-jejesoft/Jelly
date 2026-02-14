@@ -13,7 +13,7 @@
       "static/chunks/node_modules_highcharts_es-modules_36244923._.js",
       "static/chunks/node_modules_highcharts-react-official_dist_highcharts-react_min_db89b0cf.js",
       "static/chunks/src_68e232a1._.js",
-      "static/chunks/src_components_UnifiedChart_tsx_1ba0adba._.js"
+      "static/chunks/src_components_UnifiedChart_tsx_93882809._.js"
     ]
   },
   "[project]/src/components/CompareCharts.tsx [app-client] (ecmascript, next/dynamic entry)": {
@@ -30,15 +30,15 @@
       "static/chunks/node_modules_highcharts_es-modules_36244923._.js",
       "static/chunks/node_modules_highcharts-react-official_dist_highcharts-react_min_db89b0cf.js",
       "static/chunks/src_d8b18825._.js",
-      "static/chunks/src_components_CompareCharts_tsx_1ba0adba._.js"
+      "static/chunks/src_components_CompareCharts_tsx_93882809._.js"
     ]
   },
   "[project]/src/components/ComposeWorkspace.tsx [app-client] (ecmascript, next/dynamic entry)": {
     "id": "[project]/src/components/ComposeWorkspace.tsx [app-client] (ecmascript, next/dynamic entry)",
     "files": [
-      "static/chunks/src_components_ReportChartEmbed_tsx_9c7ecff1._.js",
+      "static/chunks/src_components_ReportChartEmbed_tsx_8d0bd33f._.js",
       "static/chunks/src_components_ComposeWorkspace_tsx_6f1437fe._.js",
-      "static/chunks/src_components_ComposeWorkspace_tsx_1ba0adba._.js"
+      "static/chunks/src_components_ComposeWorkspace_tsx_93882809._.js"
     ]
   }
 }

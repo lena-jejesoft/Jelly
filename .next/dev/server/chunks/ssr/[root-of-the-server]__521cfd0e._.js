@@ -1792,16 +1792,8 @@ const MENU = [
         icon: icons.analysis,
         children: [
             {
-                key: "screener",
-                label: "Stock Screener"
-            },
-            {
-                key: "comparison",
-                label: "Comparison Tool"
-            },
-            {
-                key: "earnings",
-                label: "Earnings Calendar"
+                key: "byEvent",
+                label: "By Event"
             }
         ]
     },
@@ -1883,7 +1875,7 @@ function LeftPanel() {
                                         children: item.icon
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/LeftPanel.tsx",
-                                        lineNumber: 166,
+                                        lineNumber: 164,
                                         columnNumber: 17
                                     }, this),
                                     !collapsed && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -1893,7 +1885,7 @@ function LeftPanel() {
                                                 children: item.label
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LeftPanel.tsx",
-                                                lineNumber: 169,
+                                                lineNumber: 167,
                                                 columnNumber: 21
                                             }, this),
                                             hasChildren && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1901,7 +1893,7 @@ function LeftPanel() {
                                                 children: icons.chevron
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LeftPanel.tsx",
-                                                lineNumber: 173,
+                                                lineNumber: 171,
                                                 columnNumber: 23
                                             }, this)
                                         ]
@@ -1909,7 +1901,7 @@ function LeftPanel() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/LeftPanel.tsx",
-                                lineNumber: 157,
+                                lineNumber: 155,
                                 columnNumber: 15
                             }, this),
                             hasChildren && isExpanded && !collapsed && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1923,7 +1915,7 @@ function LeftPanel() {
                                                 children: icons.sub
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LeftPanel.tsx",
-                                                lineNumber: 198,
+                                                lineNumber: 196,
                                                 columnNumber: 23
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1931,30 +1923,30 @@ function LeftPanel() {
                                                 children: child.label
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LeftPanel.tsx",
-                                                lineNumber: 199,
+                                                lineNumber: 197,
                                                 columnNumber: 23
                                             }, this)
                                         ]
                                     }, child.key, true, {
                                         fileName: "[project]/src/components/LeftPanel.tsx",
-                                        lineNumber: 189,
+                                        lineNumber: 187,
                                         columnNumber: 21
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/LeftPanel.tsx",
-                                lineNumber: 187,
+                                lineNumber: 185,
                                 columnNumber: 17
                             }, this)
                         ]
                     }, item.key, true, {
                         fileName: "[project]/src/components/LeftPanel.tsx",
-                        lineNumber: 155,
+                        lineNumber: 153,
                         columnNumber: 13
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "[project]/src/components/LeftPanel.tsx",
-                lineNumber: 148,
+                lineNumber: 146,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1965,7 +1957,7 @@ function LeftPanel() {
                     children: "»"
                 }, void 0, false, {
                     fileName: "[project]/src/components/LeftPanel.tsx",
-                    lineNumber: 215,
+                    lineNumber: 213,
                     columnNumber: 11
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                     children: [
@@ -1974,27 +1966,27 @@ function LeftPanel() {
                             children: "«"
                         }, void 0, false, {
                             fileName: "[project]/src/components/LeftPanel.tsx",
-                            lineNumber: 218,
+                            lineNumber: 216,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             children: "Collapse"
                         }, void 0, false, {
                             fileName: "[project]/src/components/LeftPanel.tsx",
-                            lineNumber: 219,
+                            lineNumber: 217,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true)
             }, void 0, false, {
                 fileName: "[project]/src/components/LeftPanel.tsx",
-                lineNumber: 210,
+                lineNumber: 208,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/LeftPanel.tsx",
-        lineNumber: 144,
+        lineNumber: 142,
         columnNumber: 5
     }, this);
 }

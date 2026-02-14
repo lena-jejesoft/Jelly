@@ -101,9 +101,7 @@ const MENU: MenuItem[] = [
     label: "Analysis",
     icon: icons.analysis,
     children: [
-      { key: "screener", label: "Stock Screener" },
-      { key: "comparison", label: "Comparison Tool" },
-      { key: "earnings", label: "Earnings Calendar" },
+      { key: "byEvent", label: "By Event" },
     ],
   },
   { key: "watchlist", label: "Watchlist", icon: icons.watchlist },

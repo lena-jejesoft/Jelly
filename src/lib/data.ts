@@ -212,3 +212,88 @@ export function fmtPct(x: number | null | undefined): string {
   if (x === null || x === undefined || isNaN(x)) return "-";
   return (x >= 0 ? "+" : "") + x.toFixed(2) + "%";
 }
+
+/* ── Report types ── */
+
+export type ReportBlockType =
+  | "title"
+  | "summary"
+  | "kpi"
+  | "chart"
+  | "events"
+  | "decisions"
+  | "freetext";
+
+export interface ReportBlock {
+  id: string;
+  type: ReportBlockType;
+  content: string;
+  visible: boolean;
+  order: number;
+}
+
+export interface ReportDraft {
+  blocks: ReportBlock[];
+  lastModified: number;
+}
+
+export function createDefaultReport(
+  events: EventItem[],
+  decisions: Decision[],
+  price: PricePoint[],
+  scenario: Scenario
+): ReportDraft {
+  const first = price[0];
+  const last = price[price.length - 1];
+  const startDate = new Date(first[0]).toISOString().slice(0, 10);
+  const endDate = new Date(last[0]).toISOString().slice(0, 10);
+  const returnPct = pct(first[1], last[1]);
+  const highImpact = events.filter((e) => e.impact >= 3).length;
+
+  const blocks: ReportBlock[] = [
+    {
+      id: "blk_title",
+      type: "title",
+      content: "SectorBook 분석 리포트",
+      visible: true,
+      order: 0,
+    },
+    {
+      id: "blk_summary",
+      type: "summary",
+      content: `분석 기간: ${startDate} ~ ${endDate}\n시나리오: ${scenario}\n기간 수익률: ${fmtPct(returnPct)}\n\n[여기에 분석 요약을 작성하세요]`,
+      visible: true,
+      order: 1,
+    },
+    {
+      id: "blk_kpi",
+      type: "kpi",
+      content: "",
+      visible: true,
+      order: 2,
+    },
+    {
+      id: "blk_chart",
+      type: "chart",
+      content: "",
+      visible: true,
+      order: 3,
+    },
+    {
+      id: "blk_events",
+      type: "events",
+      content: "",
+      visible: true,
+      order: 4,
+    },
+    {
+      id: "blk_decisions",
+      type: "decisions",
+      content: "",
+      visible: true,
+      order: 5,
+    },
+  ];
+
+  return { blocks, lastModified: Date.now() };
+}

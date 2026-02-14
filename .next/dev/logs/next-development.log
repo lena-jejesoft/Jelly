@@ -1,69 +1,14 @@
-[00:00:01.323] Server  LOG     ✓ Ready in 961ms
-[00:00:05.433] Server  LOG     ○ Compiling / ...
-[00:00:10.192] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[00:09:01.969] Server  LOG     ✓ Compiled in 81ms
-[00:17:49.759] Server  LOG     ✓ Compiled in 60ms
-[00:17:51.448] Server  LOG     ✓ Compiled in 40ms
-[00:17:55.805] Server  LOG     ✓ Compiled in 74ms
-[00:17:57.025] Server  LOG     ✓ Compiled in 70ms
-[00:17:58.910] Server  LOG     ✓ Compiled in 192ms
-[00:18:00.654] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[00:18:42.672] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[00:31:29.925] Server  LOG     ✓ Compiled in 42ms
-[00:31:38.348] Server  LOG     ✓ Compiled in 45ms
-[00:34:13.901] Server  LOG     ✓ Compiled in 88ms
-[00:34:23.522] Server  LOG     ✓ Compiled in 64ms
-[00:34:56.712] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[00:46:46.215] Server  LOG     ✓ Compiled in 27ms
-[00:46:47.417] Server  LOG     ✓ Compiled in 48ms
-[00:46:51.078] Server  LOG     ✓ Compiled in 22ms
-[00:46:52.890] Server  LOG     ✓ Compiled in 54ms
-[00:47:11.010] Server  LOG     ✓ Compiled in 47ms
-[00:47:33.033] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[00:49:17.265] Server  LOG     ✓ Compiled in 47ms
-[00:49:25.418] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[00:53:44.292] Server  LOG     ✓ Compiled in 23ms
-[00:53:48.256] Server  LOG     ✓ Compiled in 32ms
-[00:53:52.342] Server  LOG     ✓ Compiled in 33ms
-[00:53:57.328] Server  LOG     ✓ Compiled in 46ms
-[00:54:01.461] Server  LOG     ✓ Compiled in 32ms
-[00:54:50.799] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[01:01:33.135] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[01:03:42.783] Server  LOG     ✓ Compiled in 37ms
-[01:04:02.781] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[01:05:17.380] Server  LOG     ✓ Compiled in 31ms
-[01:05:30.640] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[01:06:31.224] Server  LOG     ✓ Compiled in 75ms
-[01:06:48.002] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[01:10:04.707] Server  LOG     ✓ Compiled in 40ms
-[01:10:08.564] Server  LOG     ✓ Compiled in 30ms
-[01:10:12.024] Server  LOG     ✓ Compiled in 28ms
-[01:10:45.033] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[01:12:30.196] Server  LOG     ✓ Compiled in 45ms
-[01:12:33.983] Server  LOG     ✓ Compiled in 68ms
-[01:12:41.918] Server  LOG     ✓ Compiled in 29ms
-[01:12:49.256] Server  LOG     ✓ Compiled in 40ms
-[01:12:55.155] Server  LOG     ✓ Compiled in 30ms
-[01:13:00.087] Server  LOG     ✓ Compiled in 22ms
-[01:13:06.521] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[01:13:20.153] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[01:16:35.472] Server  LOG     ✓ Compiled in 25ms
-[01:16:40.708] Server  LOG     ✓ Compiled in 42ms
-[01:17:32.003] Server  LOG     ✓ Compiled in 54ms
-[01:17:46.138] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[01:20:46.362] Server  LOG     ✓ Compiled in 153ms
-[01:20:52.572] Server  LOG     ✓ Compiled in 30ms
-[01:20:58.685] Server  LOG     ✓ Compiled in 87ms
-[01:21:02.693] Server  LOG     ✓ Compiled in 44ms
-[01:21:06.960] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[01:21:15.466] Server  LOG     ✓ Compiled in 26ms
-[01:22:02.598] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[01:23:11.445] Server  LOG     ✓ Compiled in 52ms
-[01:23:20.526] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[01:25:28.618] Server  LOG     ✓ Compiled in 23ms
-[01:25:45.049] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[01:27:40.142] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[01:28:04.290] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[01:29:32.906] Server  LOG     ✓ Compiled in 35ms
-[01:29:43.007] Server  LOG     ✓ Compiled in 28ms
-[01:29:52.252] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[00:00:01.484] Server  LOG     ✓ Ready in 1022ms
+[00:00:06.273] Server  LOG     ○ Compiling / ...
+[00:00:12.111] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:12.479] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[00:31:51.113] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[00:39:47.648] Server  LOG     ✓ Compiled in 105ms
+[00:40:05.587] Server  LOG     ✓ Compiled in 95ms
+[00:40:15.022] Server  LOG     ✓ Compiled in 62ms
+[00:40:22.556] Server  LOG     ✓ Compiled in 223ms
+[00:41:29.078] Server  LOG     ✓ Compiled in 87ms
+[00:42:10.054] Server  LOG     ✓ Compiled in 488ms
+[00:42:12.983] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[00:42:13.526] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:42:15.162] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.

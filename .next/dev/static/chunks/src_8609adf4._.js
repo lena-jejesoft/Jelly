@@ -112,8 +112,12 @@ __turbopack_context__.s([
     ()=>Button,
     "Chip",
     ()=>Chip,
+    "ControlGroup",
+    ()=>ControlGroup,
     "Select",
     ()=>Select,
+    "TabBar",
+    ()=>TabBar,
     "Toolbar",
     ()=>Toolbar
 ]);
@@ -122,7 +126,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 function Toolbar({ children }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "flex gap-2 flex-wrap items-center mb-2.5",
+        className: "flex gap-[34px] flex-wrap items-center mb-2.5",
         children: children
     }, void 0, false, {
         fileName: "[project]/src/components/Toolbar.tsx",
@@ -167,11 +171,62 @@ function Button({ onClick, children }) {
     }, this);
 }
 _c3 = Button;
-var _c, _c1, _c2, _c3;
+function ControlGroup({ label, children }) {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "flex items-center gap-1.5 border border-gray-700/60 rounded-xl px-2.5 py-1",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "text-[10px] text-gray-500 font-medium uppercase tracking-wide mr-0.5",
+                children: label
+            }, void 0, false, {
+                fileName: "[project]/src/components/Toolbar.tsx",
+                lineNumber: 65,
+                columnNumber: 7
+            }, this),
+            children
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/components/Toolbar.tsx",
+        lineNumber: 64,
+        columnNumber: 5
+    }, this);
+}
+_c4 = ControlGroup;
+function TabBar({ tabs, activeTab, onTabChange }) {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "flex items-center gap-0 border-b border-gray-800 bg-[#0b0f17] shrink-0",
+        children: tabs.map((tab)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                onClick: ()=>onTabChange(tab.key),
+                className: `relative px-5 py-2.5 text-sm font-medium transition-colors ${activeTab === tab.key ? "text-indigo-400" : "text-gray-500 hover:text-gray-300"}`,
+                children: [
+                    tab.label,
+                    activeTab === tab.key && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "absolute bottom-0 left-0 right-0 h-[2px] bg-indigo-500"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/Toolbar.tsx",
+                        lineNumber: 96,
+                        columnNumber: 13
+                    }, this)
+                ]
+            }, tab.key, true, {
+                fileName: "[project]/src/components/Toolbar.tsx",
+                lineNumber: 85,
+                columnNumber: 9
+            }, this))
+    }, void 0, false, {
+        fileName: "[project]/src/components/Toolbar.tsx",
+        lineNumber: 83,
+        columnNumber: 5
+    }, this);
+}
+_c5 = TabBar;
+var _c, _c1, _c2, _c3, _c4, _c5;
 __turbopack_context__.k.register(_c, "Toolbar");
 __turbopack_context__.k.register(_c1, "Chip");
 __turbopack_context__.k.register(_c2, "Select");
 __turbopack_context__.k.register(_c3, "Button");
+__turbopack_context__.k.register(_c4, "ControlGroup");
+__turbopack_context__.k.register(_c5, "TabBar");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
